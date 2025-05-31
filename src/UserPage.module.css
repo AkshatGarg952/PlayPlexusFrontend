@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #0f0f1a;
+}
+
+.app {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(124, 77, 255, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(255, 92, 141, 0.05) 0%, transparent 20%);
+}
+
+.app.modal-open {
+  overflow: hidden;
+}
+
+.contentContainer {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}

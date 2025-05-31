@@ -1,0 +1,105 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+    /* Main colors - different from landing but complementary */
+    --primary-color: #7c4dff;
+    --primary-light: #b47cff;
+    --primary-dark: #5c33b5;
+    --secondary-color: #ff5c8d;
+    --secondary-light: #ff8aa7;
+    --secondary-dark: #d13e6a;
+    
+    /* Background & Text */
+    --bg-dark: #0a0a14;
+    --bg-card: rgba(30, 30, 60, 0.7);
+    --bg-sidebar: rgba(22, 22, 40, 0.95);
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3cc;
+    --text-muted: #7a7a8c;
+    
+    /* Other UI colors */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hover-color: rgba(124, 77, 255, 0.15);
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+    --info-color: #2196F3;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(124, 77, 255, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 92, 141, 0.05) 0%, transparent 20%);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* For the App.js layout container */
+.contentContainer {
+    display: flex;
+    min-height: calc(100vh - 60px); /* Adjust based on navbar height */
+}
+
+/* Floating Chatbot Button */
+.chatbotButton {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    z-index: 100;
+    transition: all var(--transition-normal);
+}
+
+.chatbotButton:hover {
+    transform: scale(1.1);
+}
+
+.chatbotButton i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Responsive adjustments for overall layout */
+@media (max-width: 1024px) {
+    /* Sidebar will become fixed and toggleable via its own state */
+}

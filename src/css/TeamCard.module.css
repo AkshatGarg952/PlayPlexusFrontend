@@ -1,0 +1,257 @@
+:local {
+  /* CSS Variables */
+  --primary-color: #7c4dff;
+  --primary-light: #b47cff;
+  --success-color: #00b894;
+  --text-primary: #ffffff;
+  --text-secondary: #ddddf0;
+  --card-blue: linear-gradient(135deg, #0a2463 0%, #3e92cc 100%);
+  --card-purple: linear-gradient(135deg, #2d132c 0%, #801336 100%);
+  --card-green: linear-gradient(135deg, #004346 0%, #2c666e 100%);
+  --card-orange: linear-gradient(135deg, #7d5a50 0%, #b4846c 100%);
+  --card-pink: linear-gradient(135deg, #5f0f40 0%, #9a031e 100%);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+.userCard {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  height: 420px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.userInfo {
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity var(--transition-normal);
+}
+
+.userCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--card-blue);
+  z-index: -1;
+}
+
+.cardBg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+:local(.userCard:nth-child(5n+1)) .cardBg {
+  background: var(--card-blue);
+}
+:local(.userCard:nth-child(5n+2)) .cardBg {
+  background: var(--card-purple);
+}
+:local(.userCard:nth-child(5n+3)) .cardBg {
+  background: var(--card-green);
+}
+:local(.userCard:nth-child(5n+4)) .cardBg {
+  background: var(--card-orange);
+}
+:local(.userCard:nth-child(5n+5)) .cardBg {
+  background: var(--card-pink);
+}
+
+.userHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.userAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.userAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.userCard:hover .userAvatar img {
+  transform: scale(1.1);
+}
+
+.userInfo h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userInfo p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.detailItem i {
+  width: 20px;
+  margin-right: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.actionRow {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.actionCentered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.actionBtn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  min-width: 0;
+}
+
+.btnProfile {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.btnProfile:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btnRequest {
+  background-color: rgba(108, 92, 231, 0.8);
+  color: white;
+}
+
+.btnRequest:hover {
+  background-color: var(--primary-color);
+}
+
+.btnChat {
+  background-color: rgba(0, 184, 148, 0.8);
+  color: white;
+  width: 100%;
+  max-width: calc(50% - 0.25rem);
+}
+
+.btnChat:hover {
+  background-color: var(--success-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:local(.userCard:nth-child(3n+1)) {
+  animation-delay: 0.1s;
+}
+:local(.userCard:nth-child(3n+2)) {
+  animation-delay: 0.2s;
+}
+:local(.userCard:nth-child(3n+3)) {
+  animation-delay: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .userCard {
+    height: 360px;
+  }
+
+  .userAvatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .userInfo h3 {
+    font-size: 1.2rem;
+  }
+
+  .actionBtn {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .btnChat {
+    max-width: calc(50% - 0.25rem);
+  }
+}
