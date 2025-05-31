@@ -621,7 +621,7 @@ const PlayPlexus = ({ user, team }) => {
                 <div className="review-card">
                   <div className="reviewer">
                     <div className="reviewer-img">
-                      <img src="http://localhost:3000/profileImages/pic1.jpg" alt="User Avatar" />
+                      <img src="https://play-plexus-frontend.vercel.app/profileImages/pic1.jpg" alt="User Avatar" />
                     </div>
                     <div className="reviewer-info">
                       <h4>Alex Johnson</h4>
@@ -640,7 +640,7 @@ const PlayPlexus = ({ user, team }) => {
                 <div className="review-card">
                   <div className="reviewer">
                     <div className="reviewer-img">
-                      <img src="http://localhost:3000/profileImages/pic2.jpg" alt="User Avatar" />
+                      <img src="https://play-plexus-frontend.vercel.app/profileImages/pic2.jpg" alt="User Avatar" />
                     </div>
                     <div className="reviewer-info">
                       <h4>Sarah Kim</h4>
@@ -663,7 +663,7 @@ const PlayPlexus = ({ user, team }) => {
                 <div className="review-card">
                   <div className="reviewer">
                     <div className="reviewer-img">
-                      <img src="http://localhost:3000/profileImages/pic3.jpg" alt="User Avatar" />
+                      <img src="https://play-plexus-frontend.vercel.app/profileImages/pic3.jpg" alt="User Avatar" />
                     </div>
                     <div className="reviewer-info">
                       <h4>Michael Torres</h4>
@@ -682,7 +682,7 @@ const PlayPlexus = ({ user, team }) => {
                 <div className="review-card">
                   <div className="reviewer">
                     <div className="reviewer-img">
-                      <img src="http://localhost:3000/profileImages/pic5.jpg" alt="User Avatar" />
+                      <img src="https://play-plexus-frontend.vercel.app/profileImages/pic5.jpg" alt="User Avatar" />
                     </div>
                     <div className="reviewer-info">
                       <h4>Emma Wilson</h4>
@@ -705,7 +705,7 @@ const PlayPlexus = ({ user, team }) => {
                 <div className="review-card">
                   <div className="reviewer">
                     <div className="reviewer-img">
-                      <img src="http://localhost:3000/profileImages/pic4.jpg" alt="User Avatar" />
+                      <img src="https://play-plexus-frontend.vercel.app/profileImages/pic4.jpg" alt="User Avatar" />
                     </div>
                     <div className="reviewer-info">
                       <h4>David Chen</h4>
@@ -724,7 +724,7 @@ const PlayPlexus = ({ user, team }) => {
                 <div className="review-card">
                   <div className="reviewer">
                     <div className="reviewer-img">
-                      <img src="http://localhost:3000/profileImages/pic6.jpg" alt="User Avatar" />
+                      <img src="https://play-plexus-frontend.vercel.app/profileImages/pic6.jpg" alt="User Avatar" />
                     </div>
                     <div className="reviewer-info">
                       <h4>Olivia Martinez</h4>
