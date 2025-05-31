@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from './components/Navbar2';
 import Sidebar from './components/Sidebar';
 import TeamMain from './components/TeamMain';
-import './App.css'; // For overall layout and global styles if any
 
 function TeamPage({user, team}) {
     // You might manage sidebar/navbar active states here or within their own components
